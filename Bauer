@@ -1,15 +1,21 @@
 
-public class Bauer {
+public class BauerGold {
 
 	Bewegungsmuster dieBewegungsmuster;
 	
-	public Bauer() {
+	public BauerGold(Bewegungsmuster b){
 		
-		dieBewegungsmuster = new Bewegungsmuster();
+		dieBewegungsmuster = b;
 		
 	}
+
+
 	
-	
+	//feld mit bauer wurde geklickt-------------------------
+	public void bauerGoldClicked(String button, String[][] arraySpielfeld) {
+		// TODO Auto-generated method stub
+		dieBewegungsmuster.BauerGoldFeldRunter(button, arraySpielfeld);
+	}
 	
 }
-
+	
