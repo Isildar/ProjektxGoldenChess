@@ -190,7 +190,8 @@ public class Gui extends JFrame{
 		
 		
 		init(); //initialisiert Variablen der Gui
-		
+		/*HIER GIBT MIR JAVA BEIM AUSFÜHREN EINEN ERROR UND da bei initButtons();
+		dieActionListener.erstelleActionLis(); außerdem hat er etwas gegen die actionlistener mit (this) in der anderen klasse*/
 		
 	}
 
