@@ -177,18 +177,19 @@ public class Gui extends JFrame{
 	JPanel pUnten;
 	JPanel pContentpane;
 	
-	
+	public Gui(){}
 	
 	Gui(Bewegungsmuster b,Actionlistener a){
 		dieBewegungsmuster = b;
 		dieActionListener = a;
 		
 		dieSteuerung = new Steuerung(dieBewegungsmuster);
-	
+		
 		
 		dieBewegungsmuster.linkGui(this);
-		
+	
 		init(); //initialisiert Variablen der Gui
+		
 		
 		
 	}
@@ -272,7 +273,7 @@ public class Gui extends JFrame{
 		
 		
 		initButtons();
-		dieActionListener.erstelleActionLis();
+		//dieActionlistener.erstelleActionLis();
 		
 		
 		pContentpane = new JPanel();
@@ -375,50 +376,11 @@ public class Gui extends JFrame{
 	}
 	
 	//Gebe Buttons Actionlistener-------------------------------------------------------------------
-
-	public void erstelleActionLis() {
-		
-		bD4.addActionListener(new ActionListener() {
-			
-			public void actionPerformed(ActionEvent arg0) {
-				
-				String button = "bD4";
-				
-				if (istAmZug==false) {
-					
-					arraySpielfeldVorher = arraySpielfeld;
-					
-					dieSteuerung.rufeBewegungsMusterKlassen(arraySpielfeld, spieler, button);
-					
-					istAmZug = true;
-					
-				} else {
-					
-					dieSteuerung.bewegen(buttonKoordinaten,button);
-
-				}
+	//Gebe Buttons Actionlistener-------------------------------------------------------------------
 	
-				
-			}
-
-		});
 		
-		//Actionlistener für Dreher-Button:
-		
-		bSpielfeldDreher.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				
-				arraySpielfeld = dieSteuerung.dreheSpielfeld(arraySpielfeld);
-				
-				überschreibeButtons(arraySpielfeld);
-				
-				
-			}
-		});
-		
-	}
+	        
+	        
 
 	//Füge Buttons dem Grid-Layout zu-------------------------------------------------------------------
 	
@@ -1349,9 +1311,18 @@ public class Gui extends JFrame{
 		
 		
 	}
+
+	//------------------------------------------------------------------------------------------------
 	
 	
-}
+	
+	
+	
+    	
+    	
+    }
+
+
 
 
 
